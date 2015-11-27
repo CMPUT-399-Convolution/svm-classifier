@@ -8,5 +8,5 @@ multisvm = load('multisvm.mat');
 
 correct = ytest == preds;
 
-acc = (sum(correct)/length(mask))*100;
+acc = (sum(correct)/length(correct))*100;
 disp(['Test accuracy = ',num2str(acc),'%.']);
