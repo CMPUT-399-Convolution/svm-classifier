@@ -1,6 +1,6 @@
 setup
 
-[Xtr, ytr, Xtest, ytest] = loadMNIST('feat');
+[~, ~, Xtest, ytest] = loadMNIST('feat');
 
 multisvm = load('multisvm.mat');
 

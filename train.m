@@ -1,7 +1,7 @@
 setup
 
-[Xtr, ytr, Xtest, ytest] = loadMNIST('feat');
+[Xtr, ytr, ~, ~] = loadMNIST('pixel');
 
-multisvm = multisvmtrain(Xtr(1:5000,:), ytr(1:5000));
+multisvm = multisvmtrain(Xtr(1:10000,:), ytr(1:10000));
 
 save('multisvm.mat','-struct','multisvm');

@@ -1,6 +1,7 @@
 function [ preds, maxconfs ] = multisvmpred( multisvm, X )
     hsz = size(X,1);
     
+    tic
     confs = zeros(hsz,multisvm.nlabels);
     for i=1:multisvm.nlabels
         W = multisvm.classifiers(i).W;
@@ -9,5 +10,6 @@ function [ preds, maxconfs ] = multisvmpred( multisvm, X )
     end
     
     [maxconfs,inds] = max(confs,[],2);
-    preds = multisvm.uniqueLabels(inds); 
+    preds = multisvm.uniqueLabels(inds);
+    toc;
 end
