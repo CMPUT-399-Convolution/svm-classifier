@@ -1,7 +1,9 @@
-NumTrain    Preprocess  TrainTime   NumTest     TestTime    Error
+NumTrain    Preprocess  TrainTime       NumTest     TestTime    Error
 
-5000        None        1760.579s	10000       0.083s      0.118
+5000        None        1760.579s       10000       0.083s      0.118
 
-5000        HoG         1484.683s   10000       0.029s      0.0373
+5000        HoG         1484.683s       10000       0.029s      0.0373
 
-10000       None        
+10000       None        13711.236s      10000       0.095s      0.1365
+
+10000       HoG         9050.042s       10000       0.035s      0.0356
