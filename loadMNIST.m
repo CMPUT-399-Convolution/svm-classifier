@@ -3,7 +3,7 @@ function [ Xtrain, ytrain, Xtest, ytest ] = loadMNIST ( type )
     testfile = ['mnist/mnist-test-',type,'.mat'];
     
     % load all MNIST training data
-    try 
+    try
         load(trainfile)
     catch 
         [Xtrain, ytrain] = loadMNISTPair('./mnist', 'train-images.idx3-ubyte', 'train-labels.idx1-ubyte');
@@ -37,7 +37,6 @@ function [ Xfeat ] = convert2hog ( X, cell_size )
     [hsz, wsz] = size(X);
     disp(['Calculating hog features for ',num2str(hsz),' images.']);
     for i = 1:hsz
-        disp(num2str(i));
         I = single(reshape(X(i,:),[28 28]));
         F = vl_hog(I, cell_size);
         if not(exist('Xfeat', 'var'))

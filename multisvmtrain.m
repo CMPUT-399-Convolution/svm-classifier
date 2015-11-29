@@ -1,16 +1,15 @@
-function [ multisvm ] = multisvmtrain( X, y, epsilon, kernel, kerneloption, verbose )
-    if nargin < 6
+function [ multisvm ] = multisvmtrain( X, y, kernel, kerneloption, verbose )
+    if nargin < 5
         verbose = 0;
     end
-    if nargin < 5
+    if nargin < 4
         kerneloption = 1;
     end
-    if nargin < 4
+    if nargin < 3
         kernel = 'poly';
     end
-    if nargin < 3
-        epsilon = .000001;
-    end
+    
+    epsilon = 0.000001;
     
     tic;
     multisvm = struct;
